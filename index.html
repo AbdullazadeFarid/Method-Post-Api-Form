@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+
+   <form id="form">
+   <div class="left">
+       <input class="inp" type="text" name="firstname" id="firstname" placeholder="Ad">
+       <input class="inp" type="text" name="lastname" id="lastname" placeholder="Soyad">
+       <input class="inp" type="text" name="fathername" id="fathername" placeholder="Ata adi">
+       <input class="inp" type="email" name="mail" id="mail" placeholder="E-mail ünvan">
+        <input class="inp" type="number" name="number" id="number" placeholder="mobil nomre">
+
+   </div>
+
+   <div class="right">
+
+     <div class="top_select">
+        <label for="">Müraciətin növü</label>
+        <select name="select" id="select">
+            <option value="Secin">Secin</option>
+            <option value="Ərizə">Ərizə</option>
+            <option value="Şikayət">Şikayət</option>
+
+        </select>
+    </div>
+
+
+    <div class="bottom_select">
+        <label for="">Müraciətin növü</label>
+        <select name="select" id="select">
+            <option value="Məhsul və xidmətlər">Məhsul və xidmətlər</option>
+            <option value="Saxlanc xidməti ilı bagli">Saxlanc xidməti ilı bagli</option>
+            <option value="Kredite guzest endirimi">Kredite guzest endirimi</option>
+
+        </select>
+    </div>
+    <textarea class="textarea" placeholder="Müracietiniz" name="text" id="text" cols="30" rows="10"></textarea>
+
+
+
+        <button class="btn" type="submit">Gonder</button>
+    </form>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

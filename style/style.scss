@@ -1,0 +1,74 @@
+*{
+background-color: #e8ecf1;}
+
+#form {
+  display: flex;
+  gap: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .inp {
+      width: 100%;
+      border-radius: 12px;
+      background-color: #fff;
+      border: none;
+      padding: 20px 35px 20px 10px;
+    }
+  }
+
+  .right {
+    gap: 25px;
+
+    display: flex;
+    flex-direction: column;
+    .top_select{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        #select{
+            height: 45px;
+            border-radius: 9px;
+            width: 357px;
+            border: none;
+            width: 357px;
+            border: none;
+            background-color: #fff;
+
+        }
+    }
+    .bottom_select{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        #select{
+            height: 45px;
+            border-radius: 9px;
+            width: 357px;
+            border: none;
+            width: 357px;
+            border: none;
+            background-color: #fff;
+        }
+    }
+  }
+  .textarea{
+    border-radius: 9px;
+    background-color: #fff;
+    padding: 14px;
+
+  }
+  .btn{
+    width: 90%;
+        height: 54px;
+    border-radius: 19px;
+    background-color: #f45369;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+}
