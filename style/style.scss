@@ -1,5 +1,6 @@
-*{
-background-color: #e8ecf1;}
+* {
+  background-color: #e8ecf1;
+}
 
 #form {
   display: flex;
@@ -7,7 +8,8 @@ background-color: #e8ecf1;}
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 90vh;
+
   .left {
     display: flex;
     flex-direction: column;
@@ -26,49 +28,73 @@ background-color: #e8ecf1;}
 
     display: flex;
     flex-direction: column;
-    .top_select{
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        #select{
-            height: 45px;
-            border-radius: 9px;
-            width: 357px;
-            border: none;
-            width: 357px;
-            border: none;
-            background-color: #fff;
-
-        }
+    .top_select {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      #select {
+        height: 45px;
+        border-radius: 9px;
+        width: 357px;
+        border: none;
+        width: 357px;
+        border: none;
+        background-color: #fff;
+      }
     }
-    .bottom_select{
-        display: flex;
-        flex-direction: column;
-        gap: 7px;
-        #select{
-            height: 45px;
-            border-radius: 9px;
-            width: 357px;
-            border: none;
-            width: 357px;
-            border: none;
-            background-color: #fff;
-        }
+    .bottom_select {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      #select {
+        height: 45px;
+        border-radius: 9px;
+        width: 357px;
+        border: none;
+        width: 357px;
+        border: none;
+        background-color: #fff;
+      }
     }
   }
-  .textarea{
+  .textarea {
     border-radius: 9px;
     background-color: #fff;
     padding: 14px;
-
   }
-  .btn{
+  .btn {
     width: 90%;
-        height: 54px;
+    height: 54px;
     border-radius: 19px;
     background-color: #f45369;
     color: #fff;
     border: none;
     cursor: pointer;
   }
+}
+
+
+.message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  display: none;
+
+}
+.error{
+  font-size: 40px;
+  color: green;
+}
+
+
+
+.error_message{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  display: none;
 }
