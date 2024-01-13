@@ -1,5 +1,6 @@
 * {
   background-color: #e8ecf1;
+  margin: 0;
 }
 
 #form {
@@ -13,7 +14,7 @@
 #form .left {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 9px;
 }
 #form .left .inp {
   width: 100%;

@@ -13,10 +13,19 @@
         <form id="form">
             <div class="left">
                 <input class="inp" type="text" name="firstname" id="firstname" placeholder="Ad">
+                <p class="firsname_error"></p>
                 <input class="inp" type="text" name="lastname" id="lastname" placeholder="Soyad">
+                <p class="lastname_error"></p>
+
                 <input class="inp" type="text" name="fathername" id="fathername" placeholder="Ata adi">
-                <input class="inp" type="email" name="mail" id="mail" placeholder="E-mail ünvan">
+                <p class="fathername_error"></p>
+
+                <input class="inp" type="text" name="mail" id="mail" placeholder="E-mail ünvan">
+                <p class="mail_error"></p>
+
                 <input class="inp" type="number" name="number" id="number" placeholder="mobil nomre">
+                <p class="number_error"></p>
+
 
             </div>
 
@@ -25,25 +34,30 @@
                 <div class="top_select">
                     <label for="">Müraciətin növü</label>
                     <select name="select" id="select">
-                        <option value="Secin">Secin</option>
+                        <option class="secin" value="Secin">Secin</option>
                         <option value="Ərizə">Ərizə</option>
                         <option value="Şikayət">Şikayət</option>
 
                     </select>
+                    <p class="select_error_top"></p>
                 </div>
 
 
                 <div class="bottom_select">
                     <label for="">Müraciətin növü</label>
-                    <select name="select" id="select">
+                    <select name="select" id="select" class="select_bottom">
+                        <option value="Secin">Secin</option>
                         <option value="Məhsul və xidmətlər">Məhsul və xidmətlər</option>
                         <option value="Saxlanc xidməti ilı bagli">Saxlanc xidməti ilı bagli</option>
                         <option value="Kredite guzest endirimi">Kredite guzest endirimi</option>
 
                     </select>
+                    <p class="select_error_bottom"></p>
+
                 </div>
                 <textarea  class="textarea" placeholder="Müracietiniz" name="text" id="text" cols="30"
                     rows="10"></textarea>
+                    <p class="textarea_error"></p>
 
 
 
