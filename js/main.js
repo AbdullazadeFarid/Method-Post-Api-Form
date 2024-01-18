@@ -1,56 +1,55 @@
 var form = document.querySelector("#form"); // formu cagirirg
 const baseUrl = "https://jsonplaceholder.typicode.com/posts";
-
-function submit(e) {
+function submit(e,formData) {
   console.log("l");
-  // submit funksiyasin cagirirgki click eledikde submiti event kimi ora verek
-  e.preventDefault(); //refresh olmasin diye
-
-  let form = this; //clickledikde formun icindeki obyektleri ver
-  let formData = new FormData(form); // inputun valularin gotutu
-  console.log(formData);
-
-  function display() {
-    form.reset();
-    form.style.display = "none";
-    message.style.display = "flex";
-
+  e.preventDefault();
+  console.log("hh",formData);
+    if(a == true){
+    function display() {
+        form.reset();
+        form.style.display = "none";
+        message.style.display = "flex";
     setTimeout(() => {
       form.style.display = "flex";
       message.style.display = "none";
     }, 2000);
-  }
-  function display_error() {
-    // form.reset();
-    form.style.display = "none";
-    error_message.style.display = "flex";
+    }
 
-    setTimeout(() => {
-        form.style.display = "flex";
-        error_message.style.display = "none";
-    }, 2000);
-  }
-
-  fetch(baseUrl, {
+        fetch(baseUrl, {
     method: "POST", //post edirik
     body: formData, // gonderilen data bpdy ye gonderilir
-  })
-    .then((response) => {
-      // burda deyirkki cavab gelecek geken cavabi ekranda  ver sora onu jsona cevir
+        })
+        .then((response) => {
       console.log(response);
       display();
       return response.json();
-    })
-    .catch((error) => {
+        })
+        .catch((error) => {
       //sora deyirikki eger cavab vermese ekranda error ver .catch errorlari tutmag ucundu
       console.log(error);
       form.style.display = "none";
       error_message.style.display = "flex";
       display_error()
-    });
+        });
+    }
+    else{
+        console.log("bosdu")
+        display_error()
+    function display_error() {
+        // form.reset();
+        form.style.display = "none";
+        error_message.style.display = "flex";
+        console.log("bosdu")
+
+        setTimeout(() => {
+            form.style.display = "flex";
+            error_message.style.display = "none";
+        }, 2000);
+      }
+    }
+
 }
 
-form.addEventListener("submit", submit);
 
 var message = document.querySelector(".message");
 
@@ -84,7 +83,6 @@ lastname_error = document.querySelector(".lastname_error")
 var fathername = document.querySelector("#fathername")
 var fathername_error = document.querySelector(".fathername_error")
 
-
 var mail = document.querySelector("#mail")
 var mail_error = document.querySelector(".mail_error")
 
@@ -99,97 +97,79 @@ var select_error_bottom= document.querySelector(".select_error_bottom")
 
 var textarea = document.querySelector(".textarea")
 var textarea_error = document.querySelector(".textarea_error")
+
+var a = true
+
 form.addEventListener("submit", function(e){
     e.preventDefault()
-var a =true
-    if(a=true){
-
         if (lastname.value.trim()===""){
             lastname_error.textContent="Bos buraxma"
-
+            a=false;
         }
         else{
             lastname_error.textContent=""
-             a = false
+             a = true
         }
-
-
         if (firstname.value.trim()===""){
             firsname_error.textContent="Bos buraxma"
             a=false
         }
         else{
             firsname_error.textContent=""
-
+            a = true
         }
-
         if (fathername.value.trim()===""){
             fathername_error.textContent="Bos buraxma"
+            a = false
         }
         else{
             fathername_error.textContent=""
-            a=false
+            a = true
         }
-
-
         if (!mail.value.includes("@")){
             mail_error.textContent="@ isaresinen istifade edin ,    Meselen:asasas@.ru "
+            a=false;
         }
         else{
             mail_error.textContent=""
-            a=false
-
+            a = true
         }
-
-
         if (number.value.trim()===""){
             number_error.textContent="Bos buraxma"
+            a=false;
         }
         else{
             number_error.textContent=""
-            a=false
+            a = true
         }
-
-
-
-
         if (select.value==="Secin"){
             select_error_top.textContent="Zehmet olmasa asagidaki melumatlardan birini secin"
+            a=false;
         }
         else{
             select_error_top.textContent=""
-            a=false
+            a = true
         }
 
         if ( select_bottom.value==="Secin"){
             select_error_bottom.textContent="Zehmet olmasa asagidaki melumatlardan birini secin"
+            a=false;
         }
         else{
             select_error_bottom.textContent=""
-            a=false
+            a = true
         }
-
-
         if (textarea.value===""){
             textarea_error.textContent="Zehmet olmasa sikayetinizi bildirin"
+            a=false;
         }
         else{
             textarea_error.textContent=""
-            a=false
-
+            a = true
         }
-    }
-    //  if (a=false){
-    //     form.addEventListener("submit", submit);
 
-    // }
-
-
-
-
-
-
+        let form = this;
+        let formData = new FormData(form);
+        submit(e,formData)
 
 });
-
-
